@@ -10,10 +10,10 @@ const scss = require('gulp-sass')(require('sass'));
 
 // 소스 파일 경로
 var PATH = {
-    HTML: './workspace/html',
+    HTML: './workspace/html/cash',
     ASSETS: {
       FONTS: './workspace/assets/fonts',
-      IMAGES: './workspace/assets/images',
+      IMAGES: './workspace/assets/images/cash',
       STYLE: './workspace/assets/style',
       SCRIPT: './workspace/assets/script',
       LIB: './workspace/assets/lib',
@@ -21,10 +21,10 @@ var PATH = {
   },
   // 산출물 경로
   DEST_PATH = {
-    HTML: './dist',
+    HTML: './dist/html/cash',
     ASSETS: {
       FONTS: './dist/assets/fonts',
-      IMAGES: './dist/assets/images',
+      IMAGES: './dist/assets/images/cash',
       STYLE: './dist/assets/style',
       SCRIPT: './dist/assets/script',
       LIB: './dist/assets/lib',
@@ -34,7 +34,7 @@ var PATH = {
 gulp.task('scss:compile', () => {
   return new Promise((resolve) => {
     var options = {
-      outputStyle: 'compressed', // nested, expanded, compact, compressed
+      outputStyle: 'expanded', // nested, expanded, compact, compressed
       indentType: 'space', // space, tab , indentWidth: 4
       precision: 8,
       sourceComments: false, // 코멘트 제거 여부

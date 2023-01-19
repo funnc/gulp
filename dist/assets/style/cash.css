@@ -1,0 +1,810 @@
+@charset "UTF-8";
+body {
+  overflow: hidden;
+}
+@media (max-width: 810px) {
+  body {
+    overflow: visible;
+  }
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+label {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+label .input-chk {
+  display: flex;
+  align-items: center;
+}
+label .input-chk input {
+  position: absolute;
+  opacity: 0;
+}
+label .input-chk span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../images/cash/non-chked.svg") no-repeat center;
+  background-size: contain;
+}
+
+.possession-cash-page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Malgun Gothic", "맑은 고딕", 돋움, Dotum, sans-serif;
+  position: relative;
+  z-index: 0;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.possession-cash-page header {
+  position: relative;
+  padding-bottom: 17px;
+  padding-top: 41px;
+  font-family: "hghd";
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+@media (max-width: 810px) {
+  .possession-cash-page header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 16px;
+    font-size: 16px;
+    z-index: 1;
+    background: white;
+    justify-content: center;
+    opacity: 0;
+  }
+}
+.possession-cash-page header + div {
+  max-height: 499px;
+  padding: 20px 188px 0 188px;
+  overflow: auto;
+}
+@media (max-width: 810px) {
+  .possession-cash-page header + div {
+    margin-top: 60px;
+    padding: 0 16px;
+    max-height: initial;
+  }
+}
+.possession-cash-page header .close {
+  position: absolute;
+  top: 36px;
+  right: 40px;
+  width: 28px;
+  height: 28px;
+  background: url("../images/cash/close.svg") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+@media (max-width: 810px) {
+  .possession-cash-page header .close {
+    top: 8px;
+    right: 16px;
+  }
+}
+.possession-cash-page .sub-title {
+  font-size: 19px;
+  font-family: "hghd";
+  font-weight: 400;
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page .sub-title {
+    margin-bottom: 8px;
+    font-size: 17px;
+  }
+}
+.possession-cash-page label {
+  font-size: 18px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page label {
+    font-size: 16px;
+  }
+}
+.possession-cash-page label .text {
+  margin-left: 4px;
+  font-size: 14px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page label .text {
+    font-size: 12px;
+  }
+}
+.possession-cash-page .input-chk input + span {
+  margin-right: 12px;
+}
+.possession-cash-page .input-chk input:checked + span {
+  background: url("../images/cash/cat-chked.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .selection-price {
+  margin-bottom: 23px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page .selection-price {
+    margin-bottom: 40px;
+  }
+}
+.possession-cash-page .selection-price li {
+  display: flex;
+  position: relative;
+  height: 70px;
+  line-height: 70px;
+  margin-bottom: 8px;
+  align-items: center;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+.possession-cash-page .selection-price li:last-of-type {
+  margin-bottom: 0;
+}
+.possession-cash-page .selection-price li:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid #e3e3e3;
+  box-sizing: border-box;
+  z-index: -1;
+  content: "";
+}
+.possession-cash-page .selection-price li.is-select {
+  font-weight: 700;
+}
+.possession-cash-page .selection-price li.is-select:after {
+  position: absolute;
+  border-color: #a646f4;
+  border-width: 2px;
+  content: "";
+}
+.possession-cash-page .selection-price li label {
+  width: 100%;
+  padding-left: 22px;
+}
+.possession-cash-page .selection-price li span {
+  color: #a646f4;
+  font-weight: 700;
+}
+.possession-cash-page section {
+  margin-bottom: 40px;
+}
+.possession-cash-page section:last-of-type {
+  margin-bottom: 0;
+}
+.possession-cash-page .way {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.possession-cash-page .way li {
+  align-items: center;
+  padding-right: 22px;
+  border: 1px solid #E3E3E3;
+  border-radius: 16px;
+  height: 48px;
+  line-height: 44px;
+  font-weight: 400;
+  cursor: pointer;
+}
+@media (max-width: 810px) {
+  .possession-cash-page .way li {
+    border-width: 1px;
+  }
+}
+.possession-cash-page .way li:after {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
+}
+.possession-cash-page .way li.is-select {
+  background: #a646f4;
+  border-color: #a646f4;
+  color: white;
+  font-weight: 700;
+}
+.possession-cash-page .way li.is-select .card {
+  background: url("../images/cash/card-select.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .way li.is-select .pay {
+  background: url("../images/cash/pay-select.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .way li.is-select .phone {
+  background: url("../images/cash/phone-select.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .way li.is-select .kakao {
+  background: url("../images/cash/kakao-select.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .way li.is-select .naver {
+  background: url("../images/cash/naver-select.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .way li.is-select .kakao-text {
+  width: 73px;
+  height: 19px;
+  background: url("../images/cash/kakaotext-select.png") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .way li span {
+  display: inline-block;
+  width: calc(100% - 47px);
+  vertical-align: middle;
+  text-align: center;
+}
+@media (max-width: 810px) {
+  .possession-cash-page .way li span {
+    font-size: 14px;
+  }
+}
+.possession-cash-page .way li .img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-left: 22px;
+}
+.possession-cash-page .way li .card {
+  background: url("../images/cash/card.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .way li .kakao {
+  background: url("../images/cash/kakao.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .way li .kakao-text {
+  margin: 0 auto;
+  width: 73px;
+  height: 19px;
+  background: url("../images/cash/kakaotext.png") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .way li .naver {
+  background: url("../images/cash/naver.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .way li .pay {
+  background: url("../images/cash/pay.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .way li .phone {
+  background: url("../images/cash/phone.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page .price-count {
+  margin-top: -16px;
+  padding-left: 4px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page .price-count {
+    margin-top: 4px;
+  }
+}
+.possession-cash-page .price-count .pre-cash {
+  font-size: 15px;
+  color: #646464;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 15px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page .price-count .pre-cash {
+    font-size: 13px;
+  }
+}
+.possession-cash-page .price-count .pre-cash .price {
+  font-family: "hghd";
+  font-size: 17px;
+  color: #000;
+}
+@media (max-width: 810px) {
+  .possession-cash-page .price-count .pre-cash .price {
+    font-size: 15px;
+  }
+}
+.possession-cash-page .price-count .pre-cash .price:after {
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Malgun Gothic", "맑은 고딕", 돋움, Dotum, sans-serif;
+  content: attr(data-unit);
+}
+@media (max-width: 810px) {
+  .possession-cash-page .price-count .pre-cash .price:after {
+    font-size: 13px;
+  }
+}
+.possession-cash-page .price-count .result-cash {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 14px;
+}
+.possession-cash-page .price-count .result-cash .sub-title {
+  padding-left: 0;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Malgun Gothic", "맑은 고딕", 돋움, Dotum, sans-serif;
+  font-weight: 700;
+}
+.possession-cash-page .price-count .result-cash .result-price {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: #c10000;
+  font-size: 22px;
+  font-family: "hghd";
+  transform: translateY(-1px);
+}
+@media (max-width: 810px) {
+  .possession-cash-page .price-count .result-cash .result-price {
+    font-size: 20px;
+  }
+}
+.possession-cash-page .price-count .result-cash .result-price:after {
+  font-weight: 400;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Malgun Gothic", "맑은 고딕", 돋움, Dotum, sans-serif;
+  content: attr(data-unit);
+}
+@media (max-width: 810px) {
+  .possession-cash-page .price-count .result-cash .result-price:after {
+    font-size: 15px;
+  }
+}
+.possession-cash-page .notice {
+  margin-top: -30px;
+  padding-left: 20px;
+  background: #F6F6F6;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 51px;
+  font-weight: 400;
+}
+@media (max-width: 810px) {
+  .possession-cash-page .notice {
+    font-size: 13px;
+    line-height: 48px;
+  }
+}
+.possession-cash-page .notice span {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.possession-cash-page .desc {
+  font-size: 15px;
+  font-weight: 700;
+  color: #646464;
+  text-align: center;
+  margin-top: 27px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page .desc {
+    font-size: 13px;
+  }
+}
+.possession-cash-page button {
+  margin-top: 28px;
+  margin-bottom: 40px;
+  background: #a646f4;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page button {
+    font-size: 16px;
+    margin-bottom: 85px;
+  }
+}
+.possession-cash-page.is-dog {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.possession-cash-page.is-dog header {
+  position: relative;
+  padding-bottom: 17px;
+  padding-top: 41px;
+  font-family: "hghd";
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 16px;
+    font-size: 16px;
+    z-index: 1;
+    background: white;
+    justify-content: center;
+    opacity: 0;
+  }
+}
+.possession-cash-page.is-dog header + div {
+  max-height: 499px;
+  padding: 20px 188px 0 188px;
+  overflow: auto;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog header + div {
+    margin-top: 60px;
+    padding: 0 16px;
+    max-height: initial;
+  }
+}
+.possession-cash-page.is-dog header .close {
+  position: absolute;
+  top: 36px;
+  right: 40px;
+  width: 28px;
+  height: 28px;
+  background: url("../images/cash/close.svg") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog header .close {
+    top: 8px;
+    right: 16px;
+  }
+}
+.possession-cash-page.is-dog .sub-title {
+  font-size: 19px;
+  font-family: "hghd";
+  font-weight: 400;
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .sub-title {
+    margin-bottom: 8px;
+    font-size: 17px;
+  }
+}
+.possession-cash-page.is-dog label {
+  font-size: 18px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog label {
+    font-size: 16px;
+  }
+}
+.possession-cash-page.is-dog label .text {
+  margin-left: 4px;
+  font-size: 14px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog label .text {
+    font-size: 12px;
+  }
+}
+.possession-cash-page.is-dog .input-chk input + span {
+  margin-right: 12px;
+}
+.possession-cash-page.is-dog .input-chk input:checked + span {
+  background: url("../images/cash/cat-chked.svg") no-repeat center;
+  background-size: contain;
+  background: url("../images/cash/dog-chked.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .selection-price {
+  margin-bottom: 23px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .selection-price {
+    margin-bottom: 40px;
+  }
+}
+.possession-cash-page.is-dog .selection-price li {
+  display: flex;
+  position: relative;
+  height: 70px;
+  line-height: 70px;
+  margin-bottom: 8px;
+  align-items: center;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+.possession-cash-page.is-dog .selection-price li:last-of-type {
+  margin-bottom: 0;
+}
+.possession-cash-page.is-dog .selection-price li:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid #e3e3e3;
+  box-sizing: border-box;
+  z-index: -1;
+  content: "";
+}
+.possession-cash-page.is-dog .selection-price li.is-select {
+  font-weight: 700;
+}
+.possession-cash-page.is-dog .selection-price li.is-select:after {
+  position: absolute;
+  border-color: #a646f4;
+  border-width: 2px;
+  content: "";
+  border-color: #ff425c;
+}
+.possession-cash-page.is-dog .selection-price li label {
+  width: 100%;
+  padding-left: 22px;
+}
+.possession-cash-page.is-dog .selection-price li span {
+  color: #a646f4;
+  font-weight: 700;
+  color: #ff425c;
+}
+.possession-cash-page.is-dog section {
+  margin-bottom: 40px;
+}
+.possession-cash-page.is-dog section:last-of-type {
+  margin-bottom: 0;
+}
+.possession-cash-page.is-dog .way {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.possession-cash-page.is-dog .way li {
+  align-items: center;
+  padding-right: 22px;
+  border: 1px solid #E3E3E3;
+  border-radius: 16px;
+  height: 48px;
+  line-height: 44px;
+  font-weight: 400;
+  cursor: pointer;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .way li {
+    border-width: 1px;
+  }
+}
+.possession-cash-page.is-dog .way li:after {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
+}
+.possession-cash-page.is-dog .way li.is-select {
+  background: #a646f4;
+  border-color: #a646f4;
+  color: white;
+  font-weight: 700;
+  background: #ff425c;
+  border-color: #ff425c;
+}
+.possession-cash-page.is-dog .way li.is-select .card {
+  background: url("../images/cash/card-select.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .way li.is-select .pay {
+  background: url("../images/cash/pay-select.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .way li.is-select .phone {
+  background: url("../images/cash/phone-select.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .way li.is-select .kakao {
+  background: url("../images/cash/kakao-select.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .way li.is-select .naver {
+  background: url("../images/cash/naver-select.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .way li.is-select .kakao-text {
+  width: 73px;
+  height: 19px;
+  background: url("../images/cash/kakaotext-select.png") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .way li span {
+  display: inline-block;
+  width: calc(100% - 47px);
+  vertical-align: middle;
+  text-align: center;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .way li span {
+    font-size: 14px;
+  }
+}
+.possession-cash-page.is-dog .way li .img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-left: 22px;
+}
+.possession-cash-page.is-dog .way li .card {
+  background: url("../images/cash/card.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .way li .kakao {
+  background: url("../images/cash/kakao.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .way li .kakao-text {
+  margin: 0 auto;
+  width: 73px;
+  height: 19px;
+  background: url("../images/cash/kakaotext.png") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .way li .naver {
+  background: url("../images/cash/naver.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .way li .pay {
+  background: url("../images/cash/pay.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .way li .phone {
+  background: url("../images/cash/phone.svg") no-repeat center;
+  background-size: contain;
+}
+.possession-cash-page.is-dog .price-count {
+  margin-top: -16px;
+  padding-left: 4px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .price-count {
+    margin-top: 4px;
+  }
+}
+.possession-cash-page.is-dog .price-count .pre-cash {
+  font-size: 15px;
+  color: #646464;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 15px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .price-count .pre-cash {
+    font-size: 13px;
+  }
+}
+.possession-cash-page.is-dog .price-count .pre-cash .price {
+  font-family: "hghd";
+  font-size: 17px;
+  color: #000;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .price-count .pre-cash .price {
+    font-size: 15px;
+  }
+}
+.possession-cash-page.is-dog .price-count .pre-cash .price:after {
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Malgun Gothic", "맑은 고딕", 돋움, Dotum, sans-serif;
+  content: attr(data-unit);
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .price-count .pre-cash .price:after {
+    font-size: 13px;
+  }
+}
+.possession-cash-page.is-dog .price-count .result-cash {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 14px;
+}
+.possession-cash-page.is-dog .price-count .result-cash .sub-title {
+  padding-left: 0;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Malgun Gothic", "맑은 고딕", 돋움, Dotum, sans-serif;
+  font-weight: 700;
+}
+.possession-cash-page.is-dog .price-count .result-cash .result-price {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: #c10000;
+  font-size: 22px;
+  font-family: "hghd";
+  transform: translateY(-1px);
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .price-count .result-cash .result-price {
+    font-size: 20px;
+  }
+}
+.possession-cash-page.is-dog .price-count .result-cash .result-price:after {
+  font-weight: 400;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Malgun Gothic", "맑은 고딕", 돋움, Dotum, sans-serif;
+  content: attr(data-unit);
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .price-count .result-cash .result-price:after {
+    font-size: 15px;
+  }
+}
+.possession-cash-page.is-dog .notice {
+  margin-top: -30px;
+  padding-left: 20px;
+  background: #F6F6F6;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 51px;
+  font-weight: 400;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .notice {
+    font-size: 13px;
+    line-height: 48px;
+  }
+}
+.possession-cash-page.is-dog .notice span {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.possession-cash-page.is-dog .desc {
+  font-size: 15px;
+  font-weight: 700;
+  color: #646464;
+  text-align: center;
+  margin-top: 27px;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog .desc {
+    font-size: 13px;
+  }
+}
+.possession-cash-page.is-dog button {
+  margin-top: 28px;
+  margin-bottom: 40px;
+  background: #a646f4;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+  background: #ff425c;
+}
+@media (max-width: 810px) {
+  .possession-cash-page.is-dog button {
+    font-size: 16px;
+    margin-bottom: 85px;
+  }
+}

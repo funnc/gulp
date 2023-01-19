@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>보유캐시 충전`</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style/cash.css">
+</head>
+
+<body>
+  <!-- NOTE: 
+      고대, 강대의 디폴트 칼라값이 다르기 때문에. 
+      고양이 대통령일 경우 추가적인 class가 없습니다. 
+      강아지 대통령일 경우 is-dog class 넣어주세요. 
+   -->
+  <div class="possession-cash-page">
+    <header>
+      <div class="title">보유캐시 충전</div>
+      <div class="close"></div>
+    </header>
+    <div>
+      <section class="selection-price">
+        <div class="sub-title">충전금액 선택</div>
+        <ul>
+          <!-- NOTE: 
+              선택시 li에 is-select 클래스 추가
+          -->
+          <li class="is-select">
+            <label for="price10">
+              <div class="input-chk">
+                <input type="checkbox" id="price10">
+                <span></span>
+              </div>
+              100,000원 <span class="text">+10,000원 추가적립</span>
+            </label>
+          </li>
+          <li class="is-select">
+            <label for="price10">
+              <div class="input-chk">
+                <input type="checkbox" id="price10">
+                <span></span>
+              </div>
+              100,000원 <span class="text">+10,000원 추가적립</span>
+            </label>
+          </li>
+          <li>
+            <label for="price20">
+              <div class="input-chk">
+                <input type="checkbox" id="price20">
+                <span></span>
+              </div>
+              100,000원 <span class="text">+10,000원 추가적립</span>
+            </label>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <div class="sub-title">결제방법</div>
+        <ul class="way">
+          <!-- NOTE: 
+              선택시 li에 is-selct 클래스 추가
+           -->
+          <li class="is-select">
+            <div class="img card"></div>
+            <span>신용카드</span>
+          </li>
+          <li>
+            <div class="img kakao"></div>
+            <span>
+              <span class="kakao-text"></span>
+            </span>
+          </li>
+          <li>
+            <div class="img naver"></div>
+            <span>네이버페이</span>
+          </li>
+          <li>
+            <div class="img pay"></div>
+            <span>실시간이체</span>
+          </li>
+          <li>
+            <div class="img phone"></div>
+            <span>휴대폰결제</span>
+          </li>
+        </ul>
+      </section>
+      <section class="price-count">
+        <div class="pre-cash">
+          <div>충전 예정 보유캐시</div>
+          <div class="price" data-unit="원">110,000</div>
+        </div>
+        <div class="result-cash">
+          <div class="sub-title">결제금액</div>
+          <div class="result-price" data-unit="원">100,000 </div>
+        </div>
+      </section>
+      <section class="notice">보유캐시 이용 안내 <span>상세보기</span></section>
+      <div class="desc">위 내용을 확인하였으며 결제에 동의합니다.</div>
+      <button type="button">충전하기</button>
+    </div>
+  </div>
+</body>
+
+</html>
