@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>피커현황</title>
+  <!-- NOTE: 이전에 썼던 기본 css입니다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+</head>
+
+<body>
+  <header>
+    <div class="back-icon"></div>
+    <strong>피커현황</strong>
+  </header>
+  <div class="pickerState-page content-wrap has-bottom-tab">
+    <div class="content ">
+      <div class="nav-tab">
+        <!-- NOTE: 선택한 탭에 is-select 클래스 추가해주세요 -->
+        <div class="tab-item is-select">카트현황</div>
+        <div class="tab-item">피커현황</div>
+      </div>
+      <div class="date-wrap">
+        <div class="label">작업일자</div>
+        <span class="date">2022-12-08 오늘</span>
+        <input type="date" name="" id="">
+      </div>
+    </div>
+    <div class="fixed-table is-scroll">
+      <table>
+        <colgroup>
+          <col width="88px">
+          <col width="60px">
+          <col width="60px">
+          <col width="60px">
+          <col width="72px">
+          <col width="72px">
+          <col width="72px">
+          <col width="72px">
+        </colgroup>
+        <tbody>
+          <tr>
+            <th>피커</th>
+            <th>피킹시간</th>
+            <th>총카트수</th>
+            <th>카트수/h</th>
+            <th>총전표수</th>
+            <th>전표수/h</th>
+            <th>총PCS</th>
+            <th>PCS/h</th>
+          </tr>
+          <tr>
+            <td>7121-최민경</td>
+            <td>8.0</td>
+            <td>15</td>
+            <td>1.9</td>
+            <td>235</td>
+            <td>29</td>
+            <td>5,280</td>
+            <td>660</td>
+          </tr>
+          <tr>
+            <td>7121-최민경</td>
+            <td>8.0</td>
+            <td>15</td>
+            <td>1.9</td>
+            <td>235</td>
+            <td>29</td>
+            <td>5,280</td>
+            <td>660</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="fixed-bottom-tab">
+    <ul>
+      <!-- NOTE: 선택시 is-select 클래스 추가해주세요 -->
+      <li class="manage is-select">
+        <div class="img"></div>
+        <span>작업관리</span>
+      </li>
+      <li class="work">
+        <div class="img"></div>
+        <span>카트매핑</span>
+      </li>
+      <li class="stock">
+        <div class="img"></div>
+        <span>재고현황</span>
+      </li>
+      <li class="cart">
+        <div class="img"></div>
+        <span>카트현황</span>
+      </li>
+      <li class="picker">
+        <div class="img"></div>
+        <span>피커효율</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

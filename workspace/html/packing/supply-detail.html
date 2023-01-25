@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>피커현황</title>
+  <!-- NOTE: 이전에 썼던 기본 css입니다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+</head>
+
+<body>
+  <header>
+    <div class="back-icon"></div>
+    <strong>보충 피킹 상세</strong>
+  </header>
+  <div class="suppley-detail-page content-wrap">
+    <div class="content ">
+      <div class="info-wrap">
+        <div class="info">
+          <table>
+            <tr>
+              <th>이동번호</th>
+              <td>0011</td>
+            </tr>
+            <tr>
+              <th>이동구분</th>
+              <td class="color-red">2-긴급보충(12)</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="v-table">
+        <div class="v-tr th">
+          <div class="v-th">위치/바코드</div>
+          <div class="v-th">보관재고</div>
+          <div class="v-th">진열재고 <br>부족수량</div>
+          <div class="v-th">피킹수량</div>
+        </div>
+        <div class="v-tr item">
+          <div class="v-td">
+            <div class="imgwrap">
+              <img src="./img/sample.png" alt="">
+            </div>
+            <div class="textwrap">
+              <strong>H1-10-17-04</strong>
+              103058
+            </div>
+          </div>
+          <div class="v-td">120</div>
+          <div class="v-td">20</div>
+          <div class="v-td color-green">20</div>
+        </div>
+        <div class="v-tr button">
+          <div class="v-td is-true">보충피킹 완료</div>
+          <div class="v-td btn">수정</div>
+        </div>
+        <div class="v-tr item">
+          <div class="v-td">
+            <div class="imgwrap">
+              <img src="./img/sample.png" alt="">
+            </div>
+            <div class="textwrap">
+              <strong>H1-10-17-04</strong>
+              103058
+            </div>
+          </div>
+          <div class="v-td">42</div>
+          <div class="v-td">40</div>
+          <div class="v-td color-red">39</div>
+        </div>
+        <div class="v-tr button">
+          <div class="v-td is-false">보충피킹 완료</div>
+          <div class="v-td btn">수정</div>
+        </div>
+        <div class="v-tr item">
+          <div class="v-td">
+            <div class="imgwrap">
+              <img src="./img/sample.png" alt="">
+            </div>
+            <div class="textwrap">
+              <strong>H1-10-17-04</strong>
+              103058
+            </div>
+          </div>
+          <div class="v-td">42</div>
+          <div class="v-td">40</div>
+          <div class="v-td color-red">39</div>
+        </div>
+        <div class="v-tr button">
+          <div class="v-td">
+            <span class="icon"></span>
+            보충피킹 하기
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상품매핑</title>
+  <!-- NOTE: 이전에 썼던 기본 css입니다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+</head>
+
+<body>
+  <header>
+    <div class="back-icon"></div>
+    <strong>상품매핑</strong>
+  </header>
+  <div class="productMapping-page content-wrap">
+    <div class="content">
+      <div class="inputwrap search">
+        <input type="search" placeholder="상품 코드를 입력해주세요">
+      </div>
+      <!-- NOTE: 없는 상품이거나 매핑에 실패 했을때  -->
+      <!-- <div class="no-item">
+        없는 상품이거나, <br>매핑에 실패 하였습니다.
+      </div> -->
+      <div class="imgwrap">
+        <img src="./img/sample.png" alt="">
+      </div>
+      <p>요요쉬 애견기저귀 4단계 L 10매</p>
+      <div class="info-wrap">
+        <div class="info">
+          <table>
+            <tr>
+              <th>유통기한</th>
+              <td>2030-01-01</td>
+            </tr>
+            <tr>
+              <th>진열재고<br>부족수량</th>
+              <td>50</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="place">위치 H1-10-17-04</div>
+      <div class="inputinner">
+        <!-- NOTE: 스캔에 실패할 경우 is-error 클래스 넣어주세요 -->
+        <div class="inputwrap readonly">
+          <input type="text" placeholder="위치 바코드를 스캔해주세요." readonly>
+          <div class="status-text">바코드를 다시 스택해주세요</div>
+        </div>
+        <div class="inputwrap">
+          <!-- NOTE: 기본값 0 입니다. -->
+          <input type="text" value="0">
+          <span class="label-text">보충 수량 입력</span>
+        </div>
+      </div>
+      <button type="button" class="default-btn" disabled>완료</button>
+    </div>
+  </div>
+</body>
+
+</html>

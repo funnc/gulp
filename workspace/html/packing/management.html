@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>관리자-작업관리</title>
+  <!-- NOTE: 이전에 썼던 기본 css입니다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+</head>
+
+<body>
+  <header>
+    <div class="back-icon"></div>
+    <strong>작업관리</strong>
+  </header>
+
+  <!-- NOTE: 클래스로 단계 조절해서 보여줄 수 있고, grade1 grade2 grade3 클래스를 다 선언후 렌더링 자체를 다르게 하셔도 됩니다.
+    1단계-작업관리: grade1, 2단계-작업관리-피킹상태: grade2
+  -->
+  <div class="management-page content-wrap has-bottom-tab grade2">
+    <!-- NOTE: grade1 -->
+    <div class="">
+      <div class="calender-wrap content">
+        <div class="title-wrap">
+          <div class="title">작업 일자로 조회</div>
+          <div class="date-wrap">
+            <!-- NOTE: 초기값은 `오늘날짜 오늘` 입니다. input:date를 이용해 값이 들어갈 경우 input:date의 값이 .date안에 들어가면 됩니다. -->
+            <span class="date">2022-12-08 오늘</span>
+            <input type="date" name="" id="">
+          </div>
+        </div>
+        <div class="status-tab">
+          <!-- NOTE: 선택한 탭에 is-select 클래스 추가해주세요 -->
+          <span class="tab-item is-select">전체</span>
+          <span class="tab-item">대기중</span>
+          <span class="tab-item">피킹중</span>
+          <span class="tab-item">피킹완료</span>
+        </div>
+      </div>
+
+      <div class="list-wrap">
+        <div class="count">총 <span>2</span>건</div>
+        <ul>
+          <li>
+            <strong>강아지, 6차수</strong>
+            <div class="date">2023-01-01 10:10:00</div>
+            <div class="progress">
+              <div class="progress__inner" style="width: 75.3%"></div>
+              <div class="progress__count">75.3%</div>
+            </div>
+            <!-- NOTE: 카트매핑일 경우 is-blue, 피킹중일 경우 is-green, 피킹완료일 경우 is-red 클래스 추가해주세요 -->
+            <div class="mark color-blue">카트매핑</div>
+          </li>
+          <li>
+            <strong>강아지, 5차수</strong>
+            <div class="date">2023-01-01 10:10:00</div>
+            <div class="progress">
+              <div class="progress__inner" style="width: 75.3%"></div>
+              <div class="progress__count">75.3%</div>
+            </div>
+            <div class="mark color-green">피킹중</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- NOTE: grade2 -->
+      <div class="status-table content is-view">
+        <div class="count">총 <span>2</span>건</div>
+        <table>
+          <tr>
+            <th>상품명/위치</th>
+            <th class="order-number">주문번호</th>
+            <th>수량</th>
+            <th>상태</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="imgwrap">
+                <img src="./img/sample.png" alt="샘플이미지">
+              </div>
+              <div class="textwrap">
+                <p>로얄캐닌 인도어 10kg 변냄새 감소</p>
+                0-데스크 앞04/ 상온창고
+              </div>
+            </td>
+            <td>12345 678</td>
+            <td> 1 </td>
+            <!-- NOTE: 기본 준비, 완료일 경우 is-comple 클래스 추가 -->
+            <td><span class="status">준비</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="imgwrap">
+                <img src="./img/sample.png" alt="샘플이미지">
+              </div>
+              <div class="textwrap">
+                <p>로얄캐닌 인도어 10kg 변냄새 감소</p>
+                0-데스크 앞04/ 상온창고
+              </div>
+            </td>
+            <td>12345 678</td>
+            <td> 1 </td>
+            <!-- NOTE: 기본 준비, 완료일 경우 is-comple 클래스 추가 -->
+            <td><span class="status is-comple">완료</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- NOTE: 공통: 하단 바텀 탭 -->
+  <div class="fixed-bottom-tab">
+    <ul>
+      <!-- NOTE: 선택시 is-select 클래스 추가해주세요 -->
+      <li class="manage is-select">
+        <div class="img"></div>
+        <span>작업관리</span>
+      </li>
+      <li class="work">
+        <div class="img"></div>
+        <span>카트매핑</span>
+      </li>
+      <li class="stock">
+        <div class="img"></div>
+        <span>재고현황</span>
+      </li>
+      <li class="cart">
+        <div class="img"></div>
+        <span>카트현황</span>
+      </li>
+      <li class="picker">
+        <div class="img"></div>
+        <span>피커효율</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+<script>
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  setScreenSize();
+  window.addEventListener('resize', () => setScreenSize());
+</script>
+
+</html>

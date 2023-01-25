@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카트피킹-로그인</title>
+  <!-- NOTE: 이전에 썼던 기본 css입니다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+</head>
+
+<body>
+  <div class="login-page content-wrap">
+    <div class="content">
+      <div class="logo1">DPC</div>
+      <div class="logo2"></div>
+      <div class="input-wrap">
+        <input type="text" placeholder="아이디(이메일)">
+        <input type="text" placeholder="비밀번호">
+      </div>
+      <div class="checkbox-wrap">
+        <label for="autoLogin">
+          <input type="checkbox" name="autoLogin" id="autoLogin">
+          <span class="chk"></span>
+          <span class="text">자동 로그인</span>
+        </label>
+      </div>
+      <!-- NOTE: 비활성화시 disabled 속성추가 -->
+      <button type="button" class="default-btn">로그인</button>
+    </div>
+  </div>
+</body>
+
+<!-- NOTE: 아래 코드는 모바일 기기에서 위아래 스크롤시에 주소창으로 인해 브라우저의 높이가 변경될때, 브라우저의 innerHeight를 추출하는 코드입니다.
+  화면중앙에 와야되는 컨텐츠들과, 헤더가 fixed상태여서 사용했지만, 기본값이 100vh 로 잡혀있어 필요하지 않다면 사용안하셔도 됩니다.
+-->
+<script>
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  setScreenSize();
+  window.addEventListener('resize', () => setScreenSize());
+</script>
+
+</html>

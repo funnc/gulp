@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카트피킹-카트피킹</title>
+  <!-- NOTE: 이전에 썼던 기본 css입니다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+</head>
+
+<body>
+  <header>
+    <div class="back-icon"></div>
+    <strong>카트 매핑</strong>
+  </header>
+
+  <!-- NOTE: 클래스로 단계 조절해서 보여줄 수 있고, grade1 grade2 grade3 클래스를 다 선언후 렌더링 자체를 다르게 하셔도 됩니다.
+    1단계: grade1, 2단계: grade2, 3단계: grade3
+  -->
+  <div class="cart-picking-page content-wrap grade3">
+    <!-- NOTE: 1단계 - 카트 스캔 버튼-->
+    <img src="./img/pickingScan.svg" alt="" class="scan-btn">
+
+
+    <!-- NOTE: 2단계 - 스캔 진행 중 화면-->
+    <div class="scan-wrap">
+      <div class="desc">카트 매핑 되었습니다.</div>
+      <div class="scaner-wrap">
+        <div class="scaner"></div>
+        <p>바코드를 스캔해주세요.</p>
+      </div>
+      <div class="scan-tab">
+        <!-- NOTE: 선택시 is-select 클래스 추가 -->
+        <span class="is-select">바코드</span>
+        <span>QR코드</span>
+      </div>
+    </div>
+
+
+    <!-- NOTE: 3단계 - 스캔 완료 후 화면 -->
+    <div class="content">
+      <div class="info-wrap">
+        <div class="title">
+          <strong>작업 정보</strong>
+          <!-- NOITE: 접기 누를시 is-fold 클래스 추가 -->
+          <span class="">접기</span>
+        </div>
+        <div class="info">
+          <table>
+            <tr>
+              <th>작업 번호</th>
+              <td>001</td>
+            </tr>
+            <tr>
+              <th>카트번호</th>
+              <td>C001</td>
+            </tr>
+            <tr>
+              <th>작업 일자</th>
+              <td>2022-12-08</td>
+            </tr>
+            <tr>
+              <th>담당자</th>
+              <td>[본사] 홍길동</td>
+            </tr>
+            <tr>
+              <th>작업자</th>
+              <td>[직원] 이양지</td>
+            </tr>
+            <tr>
+              <th>상태</th>
+              <td>피킹중</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="status-tab">
+        <!-- NOTE: 선택시 is-select 클래스 추가 -->
+        <span class="is-select">전체</span>
+        <span>준비</span>
+        <span>완료</span>
+        <span>결품</span>
+      </div>
+      <div class="status-table">
+        <table>
+          <tr>
+            <th>상품명/위치</th>
+            <th>수량</th>
+            <th>상태</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="imgwrap">
+                <img src="./img/sample.png" alt="샘플이미지">
+              </div>
+              <div class="textwrap">
+                <p>로얄캐닌 인도어 10kg 변냄새 감소</p>
+                0-데스크 앞04/ 상온창고
+              </div>
+            </td>
+            <td> 1 </td>
+            <!-- NOTE: 기본 준비, 완료일 경우 is-comple 클래스 추가 -->
+            <td><span class="status">준비</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="imgwrap">
+                <img src="./img/sample.png" alt="샘플이미지">
+              </div>
+              <div class="textwrap">
+                <p>로얄캐닌 인도어 10kg 변냄새 감소</p>
+                0-데스크 앞04/ 상온창고
+              </div>
+            </td>
+            <td> 1 </td>
+            <!-- NOTE: 기본 준비, 완료일 경우 is-comple 클래스 추가 -->
+            <td><span class="status is-comple">완료</span></td>
+          </tr>
+        </table>
+      </div>
+      <button type="button" class="default-btn">피킹 시작</button>
+    </div>
+  </div>
+</body>
+
+<!-- NOTE: 아래 코드는 모바일 기기에서 위아래 스크롤시에 주소창으로 인해 브라우저의 높이가 변경될때, 브라우저의 innerHeight를 추출하는 코드입니다.
+  화면중앙에 와야되는 컨텐츠들과, 헤더가 fixed상태여서 사용했지만, 기본값이 100vh 로 잡혀있어 필요하지 않다면 사용안하셔도 됩니다.
+-->
+<script>
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  setScreenSize();
+  window.addEventListener('resize', () => setScreenSize());
+</script>
+
+</html>

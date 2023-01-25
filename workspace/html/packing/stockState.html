@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>재고현황</title>
+  <!-- NOTE: 이전에 썼던 기본 css입니다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+</head>
+
+<body>
+  <header>
+    <div class="back-icon"></div>
+    <strong>재고현황</strong>
+  </header>
+  <div class="stock-page content-wrap has-bottom-tab">
+    <div class="content">
+      <div class="count">총 <span class="color-blue">8</span>건</div>
+      <div class="status-table is-status-tooltip">
+        <table>
+          <tbody>
+            <tr>
+              <th>상품명/위치</th>
+              <th>수량</th>
+              <th>상태</th>
+            </tr>
+            <tr>
+              <td>
+                <div class="imgwrap">
+                  <img src="./img/sample.png" alt="샘플이미지">
+                </div>
+                <div class="textwrap">
+                  <p>로얄캐닌 인도어 10kg 변냄새 감소</p>
+                  0-데스크 앞04/ 상온창고
+                </div>
+              </td>
+              <td> 1 </td>
+              <!-- NOTE: 기본 준비, 완료일 경우 is-comple 클래스 추가 -->
+              <td>
+                <div class="status-wrap">
+                  <span class="status">재고부족</span>
+                  <div class="img-arrow"></div>
+                  <!-- NOTE: tooltip이 열릴경우 is-on 클래스 추가 -->
+                  <div class="tooltip is-on">
+                    <ul>
+                      <!-- NOTE: 선택중인것 is-select 추가, 재고부족 텍스트일 경우 color-red 클래스, 보충완료 텍스트일 경우  color-green 텍스트 -->
+                      <li class="is-select color-red">
+                        재고부족
+                      </li>
+                      <li class="color-green">
+                        보충완료
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="imgwrap">
+                  <img src="./img/sample.png" alt="샘플이미지">
+                </div>
+                <div class="textwrap">
+                  <p>로얄캐닌 인도어 10kg 변냄새 감소</p>
+                  0-데스크 앞04/ 상온창고
+                </div>
+              </td>
+              <td> 1 </td>
+              <!-- NOTE: 기본 준비, 완료일 경우 is-comple 클래스 추가 -->
+              <td>
+                <div class="status-wrap">
+                  <span class="status is-comple">보충완료</span>
+                  <div class="img-arrow"></div>
+                  <div class="tooltip">
+                    <ul>
+                      <li>
+                        재고부족
+                      </li>
+                      <li>
+                        보충완료
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed-bottom-tab">
+    <ul>
+      <!-- NOTE: 선택시 is-select 클래스 추가해주세요 -->
+      <li class="manage is-select">
+        <div class="img"></div>
+        <span>작업관리</span>
+      </li>
+      <li class="work">
+        <div class="img"></div>
+        <span>카트매핑</span>
+      </li>
+      <li class="stock">
+        <div class="img"></div>
+        <span>재고현황</span>
+      </li>
+      <li class="cart">
+        <div class="img"></div>
+        <span>카트현황</span>
+      </li>
+      <li class="picker">
+        <div class="img"></div>
+        <span>피커효율</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

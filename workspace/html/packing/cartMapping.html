@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카트매핑</title>
+  <!-- NOTE: 이전에 썼던 기본 css입니다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+</head>
+
+<body>
+  <header>
+    <div class="back-icon"></div>
+    <strong>카트매핑</strong>
+  </header>
+  <div class="mapping-page content-wrap has-bottom-tab">
+    <div class="content">
+      <div class="date-wrap">
+        <div class="label">작업일자</div>
+        <span class="date">2022-12-08 오늘</span>
+        <input type="date" name="" id="">
+      </div>
+      <div class="dropdown-wrap">
+        <!-- NOTE: toggle시 is-on 클래스 추가해주세요 -->
+        <div class="dropdown">
+          <div class="label">작업 차수</div>
+          <span>강아지 6차수</span>
+          <ul>
+            <!-- NOTE: 선택시 is-select 클래스 추가 -->
+            <li class="is-select">강아지 6차수</li>
+            <li>강아지 1차수</li>
+            <li>강아지 2차수</li>
+            <li>강아지 3차수</li>
+          </ul>
+        </div>
+      </div>
+      <div class="count">총 <span>8</span>건</div>
+      <div class="fixed-table type1">
+        <table>
+          <colgroup>
+            <col width="40px" />
+            <col width="auto" />
+            <col width="60px" />
+            <col width="72px" />
+            <col width="95px" />
+          </colgroup>
+          <tr>
+            <th>차수</th>
+            <th>카트번호</th>
+            <th>박스수</th>
+            <th>상태</th>
+            <th>피커</th>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>1</td>
+            <td>12</td>
+            <td class="status color-green">준비</td>
+            <td>
+              <div class="textwrap">
+                <span>윤도준
+                  <div class="img-arrow"></div>
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>2</td>
+            <td>15</td>
+            <td class="status color-red">매핑완료</td>
+            <td>
+              <div class="textwrap">
+                <span>이수환
+                  <div class="img-arrow"></div>
+                </span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed-bottom-tab">
+    <ul>
+      <!-- NOTE: 선택시 is-select 클래스 추가해주세요 -->
+      <li class="manage is-select">
+        <div class="img"></div>
+        <span>작업관리</span>
+      </li>
+      <li class="work">
+        <div class="img"></div>
+        <span>카트매핑</span>
+      </li>
+      <li class="stock">
+        <div class="img"></div>
+        <span>재고현황</span>
+      </li>
+      <li class="cart">
+        <div class="img"></div>
+        <span>카트현황</span>
+      </li>
+      <li class="picker">
+        <div class="img"></div>
+        <span>피커효율</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

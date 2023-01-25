@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카트현황</title>
+  <!-- NOTE: 이전에 썼던 기본 css입니다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+</head>
+
+<body>
+  <header>
+    <div class="back-icon"></div>
+    <strong>카트현황</strong>
+  </header>
+  <div class="cartState-page content-wrap has-bottom-tab">
+    <div class="content ">
+      <div class="nav-tab">
+        <!-- NOTE: 선택한 탭에 is-select 클래스 추가해주세요 -->
+        <div class="tab-item is-select">카트현황</div>
+        <div class="tab-item">피커현황</div>
+      </div>
+      <div class="status-tab">
+        <!-- NOTE: 선택한 탭에 is-select 클래스 추가해주세요 -->
+        <span class="tab-item is-select">전체</span>
+        <span class="tab-item">대기중</span>
+        <span class="tab-item">피킹중</span>
+        <span class="tab-item">피킹완료</span>
+      </div>
+      <div class="count">총 <span class="color-blue">8</span>건</div>
+      <div class="fixed-table">
+        <table>
+          <colgroup>
+            <col width="auto" />
+            <col width="88px" />
+            <col width="88px" />
+            <col width="88px" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>카트번호</th>
+              <th>위치</th>
+              <th>상태</th>
+              <th>피커</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>00게이트</td>
+              <td class="color-green status">준비</td>
+              <td>
+                <div class="textwrap">
+                  <span>윤도준</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>00게이트</td>
+              <td class="color-red status">매핑완료</td>
+              <td>
+                <div class="textwrap">
+                  <span>이수환</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>00게이트</td>
+              <td class="color-blue status">매핑중</td>
+              <td>
+                <div class="textwrap">
+                  <span>이수환</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed-bottom-tab">
+    <ul>
+      <!-- NOTE: 선택시 is-select 클래스 추가해주세요 -->
+      <li class="manage is-select">
+        <div class="img"></div>
+        <span>작업관리</span>
+      </li>
+      <li class="work">
+        <div class="img"></div>
+        <span>카트매핑</span>
+      </li>
+      <li class="stock">
+        <div class="img"></div>
+        <span>재고현황</span>
+      </li>
+      <li class="cart">
+        <div class="img"></div>
+        <span>카트현황</span>
+      </li>
+      <li class="picker">
+        <div class="img"></div>
+        <span>피커효율</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

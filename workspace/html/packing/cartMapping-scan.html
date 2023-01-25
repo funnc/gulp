@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카트매핑</title>
+  <!-- NOTE: 이전에 썼던 기본 css입니다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+</head>
+
+<body>
+  <header>
+    <div class="back-icon"></div>
+    <strong>카트번호 C001</strong>
+    <!-- NOTE: 닫기 아이콘 -->
+    <div class="close-icon"></div>
+  </header>
+  <!-- NOTE: 여기도 마찬가지로 grade1, grade2로 조정하셔도 되고 render를 다르게 하셔도 됩니다. -->
+  <div class="mapping-scan-page content-wrap grade2">
+    <div class="picker-wrap">
+      <div class="content">
+        <div class="title">단프라 맵핑</div>
+      </div>
+      <div class="mapping-area">
+        <div class="mapping-wrap">
+          <!-- NOTE: 스캔이 완료될 경우 is-scaned 클래스 추가 -->
+          <div class="item is-scaned">
+            <div class="numbering">1</div>
+            <div class="cart-number">P001</div>
+            <!-- NOTE: count 클래스를 가진 dom은 기본 0 이고, 스캔후 갯수가 data-count 값에 들어가면 됩니다. -->
+            <div class="count" data-count="6"></div>
+          </div>
+          <div class="item">
+            <div class="numbering">2</div>
+            <div class="cart-number"></div>
+            <div class="count" data-count="0"></div>
+          </div>
+        </div>
+        <!-- NOTE: 비활성화시 disabled 속성 추가 -->
+        <button type="button" class="default-btn">완료</button>
+      </div>
+    </div>
+    <div class="scan-wrap">
+      <div class="desc">단프라 매핑 되었습니다.</div>
+      <div class="scaning">
+        <div class="arrow-prev"></div>
+        <!-- NOTE: 인식중일때 is-scaning 클래스 추가 -->
+        <div class="scaning-text">
+          <div class="numbering">1</div>
+          <!-- NOTE: 인식중이면 `인식중..` 그렇지 않다면 단프라 번호 예: `P003`-->
+          <div class="text">인식중..</div>
+        </div>
+        <div class="arrow-next"></div>
+      </div>
+      <div class="scan-tab">
+        <!-- NOTE: 선택시 is-select 클래스 추가 -->
+        <span class="is-select">바코드</span>
+        <span>QR코드</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed-bottom-tab">
+    <ul>
+      <!-- NOTE: 선택시 is-select 클래스 추가해주세요 -->
+      <li class="manage is-select">
+        <div class="img"></div>
+        <span>작업관리</span>
+      </li>
+      <li class="work">
+        <div class="img"></div>
+        <span>카트매핑</span>
+      </li>
+      <li class="stock">
+        <div class="img"></div>
+        <span>재고현황</span>
+      </li>
+      <li class="cart">
+        <div class="img"></div>
+        <span>카트현황</span>
+      </li>
+      <li class="picker">
+        <div class="img"></div>
+        <span>피커효율</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+<script>
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  setScreenSize();
+  window.addEventListener('resize', () => setScreenSize());
+</script>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카트피킹-집품상품</title>
+  <!-- NOTE: 이전에 썼던 기본 css입니다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+  <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+</head>
+
+<body>
+  <header>
+    <div class="back-icon"></div>
+    <strong>집품상품</strong>
+    <div class="refresh-icon"></div>
+  </header>
+
+  <div class="product-page content-wrap">
+    <div class="content">
+      <div class="present-item">
+        <table>
+          <tr>
+            <th>사진</th>
+            <th>상품명/위치</th>
+            <th>수량</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="imgwrap">
+                <img src="./img/sample.png" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="textwrap">
+                <p>로얄캐닌 인도어 10kg 변냄새 감소</p>
+                0-데스크 앞04/상온창고
+              </div>
+            </td>
+            <td>1</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="grid-area">
+      <div class="grid-wrap">
+        <!-- NOTE: 노란색 배경일 경우 item클래스에 is-need, numbering이 빨간색 일 경우 is-errror 클래스 추가-->
+        <div class="item is-need">
+          <div class="numbering">1</div>
+          <div class="count">6</div>
+          <span></span>
+        </div>
+        <div class="item is-error">
+          <div class="numbering">2</div>
+          <div class="count">1</div>
+          <span>1</span>
+        </div>
+        <div class="item">
+          <div class="numbering">3</div>
+          <div class="count">1</div>
+          <span>1</span>
+        </div>
+        <div class="item">
+          <div class="numbering">4</div>
+          <div class="count">1</div>
+          <span>1</span>
+        </div>
+        <div class="item">
+          <div class="numbering">5</div>
+          <div class="count">1</div>
+          <span>1</span>
+        </div>
+        <div class="item">
+          <div class="numbering">6</div>
+          <div class="count">1</div>
+          <span>1</span>
+        </div>
+        <div class="item">
+          <div class="numbering">7</div>
+          <div class="count">1</div>
+          <span>1</span>
+        </div>
+
+      </div>
+      <div class="btn-area">
+        <button type="button" class="skip-btn">스킵</button>
+        <button type="button" class="insufficient-btn">재고부족</button>
+        <button type="button" class="default-btn">완료</button>
+      </div>
+    </div>
+
+    <div class="content next-product">
+      <div class="title">다음 집품목록</div>
+      <!-- NOTE: 다음 집품목록이 없을 경우 -->
+      <div class="no-item">다음 집품목록이 없습니다.</div>
+      <!-- NOTE: 다음 집품목록이 있을 경우 -->
+      <ul class="list">
+        <li>
+          <div class="imgwrap">
+            <img src="./img/sample.png" alt="">
+          </div>
+          <div class="textwrap">
+            <p>츄통령 바삭츄 동결건조 닭가슴살 대용량 100g</p>
+            0-데스크 앞04/상온창고
+          </div>
+          <div class="count">
+            <span>수량</span>
+            <strong>3</strong>
+          </div>
+        </li>
+        <li>
+          <div class="imgwrap">
+            <img src="./img/sample.png" alt="">
+          </div>
+          <div class="textwrap">
+            <p>츄통령 바삭츄 동결건조 닭가슴살 대용량 100g</p>
+            0-데스크 앞04/상온창고
+          </div>
+          <!-- NOTE: 선택 시 is-select 클래스 추가 -->
+          <div class="count is-select">
+            <span>수량</span>
+            <strong>3</strong>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  setScreenSize();
+  window.addEventListener('resize', () => setScreenSize());
+
+  // NOTE: 추후 유지보수가 될 수 있을거같아 피킹의 칸수 조절을 위해 위와 같이 시스템변수로 칸수를 조절합니다. (ex: 4 -> 한줄에 4개, 3 -> 한줄에 3개로 배치)
+  // 이 기능을 사용안해도 기본값은 4로 지정됩니다.
+  const pickingItem = 4;
+  document.documentElement.style.setProperty('--picking-item', `${pickingItem}`);
+</script>
+
+</html>

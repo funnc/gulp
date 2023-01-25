@@ -8,24 +8,29 @@ var imagemin = require('gulp-imagemin');
 var del = require('del');
 const scss = require('gulp-sass')(require('sass'));
 
+// 카트피킹 - packing
+// cash 모달 - cash
+// 그 외 기본 - ''
+const url = '';
+
 // 소스 파일 경로
 var PATH = {
-    HTML: './workspace/html/cash',
+    HTML: `./workspace/html${url}`,
     ASSETS: {
       FONTS: './workspace/assets/fonts',
-      IMAGES: './workspace/assets/images/cash',
-      STYLE: './workspace/assets/style',
+      IMAGES: `./workspace/assets/images${url}`,
+      STYLE: `./workspace/assets/style${url}`,
       SCRIPT: './workspace/assets/script',
       LIB: './workspace/assets/lib',
     },
   },
   // 산출물 경로
   DEST_PATH = {
-    HTML: './dist/html/cash',
+    HTML: `./dist/html/${url}`,
     ASSETS: {
       FONTS: './dist/assets/fonts',
-      IMAGES: './dist/assets/images/cash',
-      STYLE: './dist/assets/style',
+      IMAGES: `./dist/assets/images${url}`,
+      STYLE: `./dist/assets/style${url}`,
       SCRIPT: './dist/assets/script',
       LIB: './dist/assets/lib',
     },
