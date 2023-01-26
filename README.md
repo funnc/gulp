@@ -9,7 +9,9 @@
 
 ---
 
-workspace/index.html 파일은 필수로 있어야 합니다. 소스파일 경로 HTML: './workspace/html', 산출물 경로 HTML: './dist/html',
+workspace/index.html 파일은 필수로 있어야 합니다. 
+
+디폴트 - 소스파일 경로 HTML: './workspace/html', 산출물 경로 HTML: './dist/html',
 
 index.html 파일은 기본적으로 컴파일되며,
 
