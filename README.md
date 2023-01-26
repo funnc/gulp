@@ -21,18 +21,28 @@ gulpfile.js에 정의된 경로가 아니라면 추적이 안되어 사용시에
 예시)
 소스파일 경로
 HTML: './workspace/html/cash',
+
 IMAGES: './workspace/assets/images/cash',
+
 STYLE: './workspace/assets/style/cash',
+
 산출물 경로
 HTML: './dist/html/cash',
+
 IMAGES: './dist/assets/images/cash',
+
 STYLE: './dist/assets/style/cash',
 
 소스파일 경로
 HTML: './workspace/html/packing',
+
 IMAGES: './workspace/assets/images/packing',
+
 STYLE: './workspace/assets/style/packing',
+
 산출물 경로
 HTML: './dist/html/packing',
+
 IMAGES: './dist/assets/images/packing',
+
 STYLE: './dist/assets/style/packing',
