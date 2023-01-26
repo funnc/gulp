@@ -40,7 +40,9 @@ IMAGES: './dist/assets/images/cash',
 
 STYLE: './dist/assets/style/cash',
 
-소스파일 경로 HTML: './workspace/html/packing',
+소스파일 경로 
+
+HTML: './workspace/html/packing',
 
 IMAGES: './workspace/assets/images/packing',
 
