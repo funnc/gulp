@@ -9,13 +9,21 @@
   <!-- NOTE: 이전에 썼던 기본 css입니다. -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
   <link href="https://funnc-static.s3.ap-northeast-2.amazonaws.com/font.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/style/packing/cartPicking.css">
+  <link rel="stylesheet" href="./cartPicking.css">
 </head>
 
 <body>
-  <header>
+  <header style="position: relative;">
     <div class="back-icon"></div>
-    <strong>헤더</strong>
+    <strong>헤더 - 뒤로가기 ( 백 아이콘 )</strong>
+  </header>
+  <header style="position: relative;">
+    <strong>헤더 - 새로고침 ( 리프레쉬 아이콘 )</strong>
+    <div class="refresh-icon"></div>
+  </header>
+  <header style="position: relative;">
+    <strong>헤더 - 창 닫기 ( 클로즈 아이콘 )</strong>
+    <div class="close-icon"></div>
   </header>
 
   <div class="component-page content-wrap">
@@ -25,6 +33,7 @@
       <h3>팔레트</h3>
       <div class="color-green">초록색</div>
       <div class="color-red">빨간색</div>
+      <div class="color-blue">파란색</div>
 
       <h3>시스템 데이트피커: 라벨이 없는 형식</h3>
       <div class="date-wrap">
@@ -51,6 +60,22 @@
           <li>강아지 2차수</li>
           <li>강아지 3차수</li>
         </ul>
+      </div>
+
+      <h3>미니 테이블</h3>
+      <div class="info-wrap">
+        <div class="info">
+          <table>
+            <tr>
+              <th>유통기한</th>
+              <td>2030-01-01</td>
+            </tr>
+            <tr>
+              <th>진열재고<br>부족수량</th>
+              <td>50</td>
+            </tr>
+          </table>
+        </div>
       </div>
 
       <h3>기본 - 테이블 유형1: 상품명을 포함하고 첫 열의 width가 auto </h3>
@@ -370,6 +395,71 @@
             <td>3,249</td>
           </tr>
         </table>
+      </div>
+      <h3>테이블 유형3 - table 태그가 아닌 div 로 된 테이블</h3>
+      <div class="v-table">
+        <div class="v-tr th">
+          <div class="v-th">위치/바코드</div>
+          <div class="v-th">보관재고</div>
+          <div class="v-th">진열재고 <br>부족수량</div>
+          <div class="v-th">피킹수량</div>
+        </div>
+        <div class="v-tr item">
+          <div class="v-td">
+            <div class="imgwrap">
+              <img src="./img/sample.png" alt="">
+            </div>
+            <div class="textwrap">
+              <strong>H1-10-17-04</strong>
+              103058
+            </div>
+          </div>
+          <div class="v-td">120</div>
+          <div class="v-td">20</div>
+          <div class="v-td color-green">20</div>
+        </div>
+        <div class="v-tr button">
+          <div class="v-td is-true">보충피킹 완료</div>
+          <div class="v-td btn">수정</div>
+        </div>
+        <div class="v-tr item">
+          <div class="v-td">
+            <div class="imgwrap">
+              <img src="./img/sample.png" alt="">
+            </div>
+            <div class="textwrap">
+              <strong>H1-10-17-04</strong>
+              103058
+            </div>
+          </div>
+          <div class="v-td">42</div>
+          <div class="v-td">40</div>
+          <div class="v-td color-red">39</div>
+        </div>
+        <div class="v-tr button">
+          <div class="v-td is-false">보충피킹 완료</div>
+          <div class="v-td btn">수정</div>
+        </div>
+        <div class="v-tr item">
+          <div class="v-td">
+            <div class="imgwrap">
+              <img src="./img/sample.png" alt="">
+            </div>
+            <div class="textwrap">
+              <strong>H1-10-17-04</strong>
+              103058
+            </div>
+          </div>
+          <div class="v-td">42</div>
+          <div class="v-td">40</div>
+          <div class="v-td color-red">39</div>
+        </div>
+        <div class="v-tr button">
+          <div class="v-td">
+            <span class="icon"></span>
+            보충피킹 하기
+          </div>
+        </div>
       </div>
     </div>
   </div>
